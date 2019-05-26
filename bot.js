@@ -97,9 +97,6 @@ ${prefix}contact/ارسال اقتراح او لمراسلة صاحب البوت
         ***__Administrative Orders__***
 **
 ${prefix}move @user /  لسحب الشخص الى روومك
-${prefix}bc / رسالة جماعية الى كل اعضاء السيرفر
-${prefix}bk / رسالة جماعيه مع
-${prefix}rolebc <everyone or @role> / راسال رساله جماعيه لرتبه محدده
 ${prefix}role @user <rank> / لأعطاء رتبة لعضو معين
 ${prefix}roleremove @user <rank> / لازالة الرتبة من شخص معين
 ${prefix}give all <rank> / لأعطاء رتبة للجميع
@@ -125,18 +122,7 @@ ${prefix}make <number> / ينشا لك الوان مع كم الوان تبي
 ${prefix}color <number> / لختيار لون
 ${prefix}deletecolors <number> / لحذف الالوان
 **
-   `,`
-        ***__Music orders__***
-**
-${prefix}play / لتشغيل أغنية برآبط أو بأسم
-${prefix}skip / لتجآوز الأغنية الحآلية
-${prefix}pause / إيقآف الأغنية مؤقتا
-${prefix}resume / لموآصلة الإغنية بعد إيقآفهآ مؤقتا
-${prefix}vol / لتغيير درجة الصوت 100 - 0
-${prefix}stop / لإخرآج البوت من الروم
-${prefix}np / لمعرفة الأغنية المشغلة حآليا
-${prefix}queue / لمعرفة قآئمة التشغيل
-**
+   
         ***__Games orders__***
  **       
 ${prefix}rps / حجر ورقة مقص
@@ -2367,7 +2353,7 @@ var al7arthyCodes2 = ["??__60%__  **|**  ??__40%__","??__63%__  **|**  ??__37%__
 client.on('message', message => {
     if(!message.guild) return;
     if (message.author.bot) return;
-      let id = message.author.id,prefix="a";//البريفكس
+      let id = message.author.id,prefix="&";//البريفكس
       if (ti[id] && (new Date).getTime() - ti[id] < 20*1000) {
           let r = (new Date).getTime() - ti[id];
           r = 20*1000 - r;
